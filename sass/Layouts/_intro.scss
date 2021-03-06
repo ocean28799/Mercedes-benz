@@ -1,0 +1,72 @@
+.intro{
+    
+    width: 84%;
+    margin: auto;
+    .content__intro{
+        margin-top: 15%;
+        color: $color-white-0;
+        padding-right: 28%;
+        h2{
+            margin-bottom: 3.5%;
+        }
+        p{
+            line-height: 150%;
+            letter-spacing: 0.5px;
+            margin-bottom: 0;
+        }
+        .long{
+            margin-bottom: 2%;
+        }
+        span{
+            a{
+                text-decoration: none;
+                color: $theme-primary;
+
+                &:hover{
+                    color: $theme-active;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+
+@include responsive("ipad"){
+    .intro{
+        .content__intro{
+            margin-top: 20%;
+            padding-right: 0;
+            line-height: 170%;
+            letter-spacing: 2px;
+            h2{
+                font-size: $fs-3;
+            }
+            p,.long{
+                font-size: $fs-1 + 1;
+            }
+        }
+    }
+}
+
+@include responsive("small"){
+    .intro{
+        .content__intro{
+            margin-top: 30%;
+            padding-right: 0%;
+            line-height: 6px;
+            letter-spacing: 2px;
+            h2{
+                font-size: $fs-3;
+                margin-bottom: 6%;
+            }
+            p,.long{
+                margin-bottom: 6%;
+            }
+            .spacing{
+                margin-bottom: 10%;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,47 @@
+.vehicle.show{
+    transform: scale(1);
+    overflow-y: hidden;
+    top: 100%;
+}
+.vehicle{
+    width: 100%;
+    transform: scale(0);
+    position: absolute;
+    top: 0;
+    left:0;
+    z-index: 98;
+    transition: all .5s;
+    font-family: 'Oswald', sans-serif; 
+    .vehicle__content{
+        
+        height: 38rem;
+        background-color: $color-white-0;
+        position: relative;
+        .item{
+            position: relative;
+            .row{
+                padding-top: 4%;
+                width: 100%;
+                .item_vehicle{
+                    a{
+                        text-align: center;
+                        text-decoration: none;
+                        @include styleText(#333,1.5rem,$fw-normal);
+                        img{
+                            width: 100%;
+                            padding-bottom: 10%;
+                        }
+                        span{
+                            padding-left: 33%;
+                        }
+
+                        .maybach{
+                            padding-left: 16%;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}

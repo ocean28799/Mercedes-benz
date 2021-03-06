@@ -1,0 +1,58 @@
+.brandHub{
+    width: 95%;
+    margin: auto;
+    margin-top:10%;
+    
+    .brandHubContent{
+        word-spacing: 1px;
+        p{
+            position: relative;
+        }
+        color: $color-white-0;
+        .brandHub-icon{
+            margin-left: 2%;
+        }
+        .brandHub-number{
+            position: absolute;
+            top: -2px;
+            left:0;
+            font-size: 75%;
+            display: inline-block;
+        }
+        .brandHub-opa{
+            opacity: 0;
+        }
+    }
+}
+
+
+
+@include responsive("ipad"){
+    .brandHub{
+        width: 90%;
+
+        .brandHubContent{
+            line-height: 170%;
+            
+        }
+    }
+}
+
+@include responsive("small"){
+    .brandHub{
+        width: 84%;
+
+        .brandHubContent{
+            line-height: 170%;
+            p{
+                .brandHub-icon{
+                    margin-left: 0;
+                    
+                }
+                .gDragon{
+                    margin-right: 50%;
+                }
+            }
+        }
+    }
+}

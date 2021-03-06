@@ -1,0 +1,149 @@
+#headerNavbar.hide {
+  transform: translateY(-10rem);
+}
+.myNavbar {
+  transition: all 0.9s;
+  position: fixed;
+  z-index: 99;
+  background-color: black;
+  width: 100%;
+  top: 0;
+  @include styleText($color-white-0, $fs-0 + 1, $fw-normal);
+  background-color: $color-black-0;
+  .navbar {
+    padding: 1% 4%;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    a {
+      text-decoration: none;
+      color: $color-white-0;
+    }
+
+    .logo_brand {
+      padding-top: 1%;
+
+      .text {
+        padding-top: 10%;
+        padding-left: 28%;
+      }
+    }
+    .navbar-top {
+      position: absolute;
+      top: 0;
+      right: 4%;
+      a {
+        display: inline-block;
+      }
+      .header-show {
+        display: none;
+      }
+      .headerInfor-icon {
+        font-size: 19px;
+      }
+    }
+    .navbar-bottom {
+      justify-content: flex-end;
+      padding-top: 4%;
+      .nav-item {
+        .nav-link {
+          padding-right: 2rem;
+        }
+      }
+    }
+    .nav-link:hover {
+      color: $theme-primary;
+    }
+
+    .hover-none:hover {
+      color: $color-white-0;
+    }
+  }
+}
+
+
+
+@include responsive("ipad"){
+  .navbar-collapse{
+      text-align: center;
+      @include styleText($color-white-0,$fs-2,$fw-normal);
+  }
+}
+
+@include responsive("ipad"){
+  .myNavbar{
+    .navbar{
+
+      .navbar-top{
+        margin-right: 1%;
+      }
+
+      .logo_brand{
+        img{
+          width: 25%;
+        }
+
+        .text{
+          width: 70%;
+          padding-top: 5%;
+          padding-left: 20%;
+        }
+      }
+      .navbar-toggler{
+        margin-top: 5%;
+        margin-bottom: 0;
+        margin-left: 64%;
+      }
+    }
+  }
+}
+
+
+@include responsive("small") {
+  .myNavbar {
+    .navbar {
+      @include styleText($color-white-0, $fs-0, $fw-normal);
+      .navbar-top {
+        .header-hidden {
+          display: none;
+        }
+        .header-show {
+          display: inline-block;
+          .headerInfor-icon{
+              font-size: $fs-1;
+              margin-left: 100%;
+          }
+        }
+      }
+      .logo_brand {
+        img {
+          width: 20%;
+        }
+        .text {
+          width: 50%;
+          padding-top: 5%;
+          padding-left: 10%;
+        }
+      }
+
+      .navbar-toggler {
+        margin-top: 10%;
+        margin-bottom: -3%;
+        padding: 0;
+        margin-left: 33%;
+
+        &:focus {
+          border: none;
+          outline: none;
+        }
+      }
+    }
+  }
+}
+
+@include responsive("small"){
+    .navbar-collapse{
+        text-align: center;
+        @include styleText($color-white-0,$fs-2,$fw-normal);
+    }
+}

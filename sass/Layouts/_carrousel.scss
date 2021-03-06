@@ -1,0 +1,129 @@
+.myCarrousel {
+  position: relative;
+  margin-top: 9%;
+  .dad_input {
+    padding: 1.5% 8%;
+    @include responsive("small") {
+      padding: 4% 15%;
+    }
+    background-color: $bg-on-base-color;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    .input {
+      .input-search {
+        padding: 2%;
+        @include styleText($hover-on-base-color, $fs-2, $fw-normal);
+        @include responsive("small") {
+          font-size: $fs-1;
+        }
+      }
+      .input-group-append {
+        span {
+          background-color: $color-white-0;
+          color: $bg-on-base-color;
+        }
+        &:hover {
+          span {
+            color: rgb(97, 97, 97);
+          }
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .cover__content {
+    .item {
+      position: relative;
+      .content {
+        @include styleText($color-white-0, $fs-3, $fw-bold);
+        line-height: $line-height-0;
+        h1 {
+          padding-right: 25%;
+          letter-spacing: 1px;
+          margin-bottom: 3%;
+          line-height: 180%;
+        }
+        position: absolute;
+        top: 9%;
+        left: 8%;
+      }
+
+      .sub {
+        position: absolute;
+        bottom: 5%;
+        left: 8%;
+        p {
+          margin: 0;
+          margin-bottom: 2%;
+          @include styleText($color-white-0, $fs-0, $fw-normal);
+
+          
+
+          @include responsive("ipad"){
+            font-size: $fs-1;
+          }
+
+          @include responsive("small") {
+            font-size: $fs-1 - 5;
+          }
+        }
+      }
+    }
+
+    .black-text {
+      h1 {
+        @include styleText($color-black-0, $fs-3, $fw-bold);
+
+        @include responsive("small") {
+          font-size: $fs-1 - 3;
+        }
+      }
+    }
+  }
+}
+
+
+
+@include responsive("ipad") {
+  .myCarrousel {
+    margin-top: 12%;
+    img {
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .cover__content {
+      .item{
+        .content {
+          h1 {
+            font-size: $fs-2;
+            margin-bottom: 10%;
+          }
+        }
+      }
+      
+    }
+  }
+}
+
+@include responsive("small") {
+  .myCarrousel {
+    margin-top: 17%;
+    img {
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .cover__content {
+      .content {
+        top: 50%;
+        left: 8%;
+        h1 {
+          font-size: $fs-1 -3;
+        }
+      }
+    }
+  }
+}

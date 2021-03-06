@@ -1,0 +1,293 @@
+.footer__content {
+  width: 92%;
+  margin: auto;
+  margin-top: 5%;
+  color: $color-white-0;
+  .footer__top {
+    .row {
+      .footer_title {
+        border-bottom: 1px solid rgba(235, 235, 235, 0.277);
+        padding: 0;
+        h1 {
+          padding-bottom: 10%;
+          font-family: "Oswald", sans-serif;
+        }
+      }
+
+      .footer_link {
+        padding: 0;
+        margin-top: 10%;
+        margin-bottom: 10%;
+        a {
+          text-decoration: none;
+          color: $link-on-base-color;
+          display: block;
+          font-size: 14px;
+          letter-spacing: 0.8px;
+
+          &:hover {
+            color: $theme-primary;
+          }
+        }
+      }
+    }
+
+
+    @include responsive("ipad") {
+      .row {
+        width: 98%;
+        margin: auto;
+        margin-top: 5%;
+        .footer_title {
+          h1 {
+            padding: 0;
+            font-size: $fs-4;
+            margin: 2% 0;
+          }
+        }
+
+        .footer_link {
+          margin: 5% 0;
+          a {
+            font-size: $fs-0 + 3;
+          }
+        }
+      }
+    }
+
+    @include responsive("small") {
+      .row {
+        width: 92%;
+        margin: auto;
+        margin-top: 5%;
+        .footer_title {
+          h1 {
+            padding: 0;
+            font-size: $fs-4;
+          }
+        }
+      }
+    }
+
+    
+  }
+
+  .footer__mid {
+    padding: 0;
+    .footer_border {
+      border-bottom: 1px solid rgba(235, 235, 235, 0.277);
+    }
+    h1 {
+      font-family: "Oswald", sans-serif;
+      margin-top: 3%;
+      padding-bottom: 3%;
+    }
+
+    .content__midFooter {
+      margin-top: 3%;
+      margin-bottom: 3%;
+      .col-12 {
+        padding: 0;
+        p {
+          @include styleText($link-on-base-color, $fs-0, $fw-normal);
+          padding-right: 55%;
+          letter-spacing: 0.7px;
+        }
+        i {
+          @include styleText($link-on-base-color, $fs-3 + 5, $fw-normal);
+          padding: 0.5% 2%;
+          padding-left: 1%;
+
+          &:hover {
+            color: $theme-primary;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    
+
+    @include responsive("ipad") {
+      width: 94%;
+      margin: auto;
+      h1 {
+        font-size: $fs-4;
+      }
+      .content__midFooter {
+        .col-12 {
+          p {
+            padding-right: 0;
+            font-size: $fs-1;
+          }
+
+          i {
+            margin-right: 4%;
+          }
+        }
+      }
+    }
+
+    @include responsive("small") {
+      width: 83%;
+      margin: auto;
+      h1 {
+        font-size: $fs-4;
+      }
+      .content__midFooter {
+        .col-12 {
+          p {
+            padding-right: 0;
+            font-size: $fs-1;
+          }
+
+          i {
+            margin-right: 4%;
+          }
+        }
+      }
+    }
+  }
+
+  .footer__bottom {
+    padding: 0;
+    display: flex;
+    margin-top: 5%;
+    .row {
+      width: 103%;
+      justify-content: space-around;
+      border-top: 1px solid rgba(235, 235, 235, 0.277);
+    }
+    img {
+      padding-top: 5%;
+      width: 16%;
+      padding-bottom: 5%;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    
+
+    @include responsive("ipad") {
+      width: 94%;
+      margin: auto;
+    }
+
+    @include responsive("small") {
+      width: 83%;
+      margin: auto;
+      margin-top: 10%;
+      img {
+        margin: 5% 1%;
+        display: block;
+        width: 50%;
+      }
+    }
+  }
+
+  .last__footer {
+    .lastFooter__content {
+      border-top: 1px solid rgba(235, 235, 235, 0.277);
+      p {
+        @include styleText($link-on-base-color, $fs-0, $fw-normal);
+        letter-spacing: 0.7px;
+        margin-top: 3%;
+        a {
+          text-decoration: none;
+          color: $color-white-0;
+          &:hover {
+            color: $theme-primary;
+          }
+        }
+      }
+    }
+
+    
+
+    @include responsive("ipad") {
+      padding: 3%;
+      font-size: $fs-0;
+    }
+
+    @include responsive("small") {
+      padding: 10%;
+      font-size: $fs-0;
+    }
+  }
+}
+
+.final__footer {
+  width: 98%;
+  margin: auto;
+  margin-top: 3%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1%;
+
+  .finalFooter__one {
+    @include styleText($color-white-0, $fs-0, $fw-normal);
+    letter-spacing: 0.8px;
+    a {
+      text-decoration: none;
+      color: $theme-active;
+      border-right: 1px solid $theme-active;
+      padding-right: 10px;
+      margin-right: 10px;
+      &:hover {
+        color: #0074aa;
+      }
+    }
+  }
+
+  .finalFooter__two {
+    a {
+      text-decoration: none;
+      @include styleText(rgba(138, 138, 138, 0.6), $fs-0, $fw-normal);
+      letter-spacing: 0.6px;
+      padding: 0 8px;
+
+      &:hover {
+        color: $theme-primary;
+      }
+    }
+  }
+
+  
+  @include responsive("ipad") {
+    margin-bottom: 2%;
+    display: block;
+    text-align: start;
+    .finalFooter__one {
+      margin-top: 5%;
+      margin-bottom: 2%;
+      margin-left: 1%;
+    }
+    .finalFooter__two {
+      text-align: start;
+      margin-bottom: 3%;
+      padding-right: 30%;
+      line-height: 200%;
+    }
+    .finalFooter__three {
+      text-align: end;
+    }
+  }
+
+  @include responsive("small") {
+    margin-bottom: 20%;
+    display: block;
+    text-align: center;
+    .finalFooter__one {
+      margin-bottom: 10%;
+    }
+    .finalFooter__two {
+      text-align: start;
+      margin-bottom: 5%;
+      line-height: 200%;
+    }
+    .finalFooter__three {
+      text-align: end;
+    }
+  }
+}

@@ -1,0 +1,115 @@
+.myCarrousel{
+    .cover__content{
+        .owl-nav{
+            button.owl-prev,button.owl-next{
+                background: none;
+                &:hover{
+                    background: none;
+                }
+            }
+        }
+    }
+}
+
+.owl-prev, .owl-next{
+    position: absolute;
+    top: 45%;
+    left: 4%;
+    background: none;
+
+    z-index: 3;
+    
+    @include responsive("small"){
+        left: 2%;
+    }
+
+    span{
+        @include styleText($color-white-0,4rem,$fw-bold);
+        line-height: 0.7;
+        transition:all .5s;
+        @include responsive("small"){
+            font-size: 2rem;
+        }
+    }
+
+    &:focus{
+        outline: none;
+    }
+
+    &:hover{
+        background: none;
+        span{
+            color: #333;
+            
+        }
+    }
+}
+
+.owl-next{
+    left: unset;
+    right: 4%;
+
+    @include responsive("small"){
+        right: 2%;
+    }
+}
+
+.slick-prev,.slick-next{
+    border:none;
+    background-color: transparent;   
+    color: white;
+
+    &:focus{
+        border:transparent;
+        outline: none;
+    }
+}
+
+.slick-prev::before{
+    color: #424242;
+    font-weight: bold;
+    content: '<';
+    font-size: $fs-4 + 4;
+    position: absolute;
+    top:80%;
+    left:12%;
+}
+
+.slick-next::before {
+    color: #424242;
+    font-weight: bold;
+    content: '>';
+    font-size: $fs-4 + 4;
+    position: absolute;
+    top:80%;
+    right:12%;
+}
+
+.slick-dots{
+    position: absolute;
+    top: 85%;
+    left:42%;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    
+    li{
+        button{
+            color: white;
+            background-color: transparent;
+            border:none;
+            outline: none;
+            border-bottom: 3px solid #424242;
+            padding: 0 2rem;
+            margin-right: $mg-1 - 3;
+        }
+    }
+    li.slick-active{
+        button{
+            color: white;
+            border-bottom: 3px solid $theme-primary;
+            padding: 0 2rem;
+            margin-right: $mg-1 - 3;
+        }
+    }
+}
